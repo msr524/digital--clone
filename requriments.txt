@@ -1,0 +1,82 @@
+main tools ---
+*streamlit
+*chromadb
+*groq
+*sentence-transformers
+*python-dotenv
+------------------------------------
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Groq + Llama 3.3 70B | Language generation |
+| ChromaDB | Vector database |
+| SentenceTransformers | Local embedding model |
+| Streamlit | Frontend UI |
+| RAG Architecture | Grounded response generation |
+
+## 📊 Dataset Stats
+- Total messages processed: 18,897
+- QA pairs extracted: 5,176
+- Vector embeddings stored: 7,036
+- Embedding dimensions: 384
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
+```
+
+### 2. Create virtual environment
+```bash
+python -m venv venv
+venv\Scripts\activate   # Windows
+source venv/bin/activate # Mac/Linux
+```
+
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Setup API key
+```bash
+# Copy the example file
+cp .env.example .env
+
+# Open .env and add your Groq API key
+# Get free key from: https://console.groq.com
+GROQ_API_KEY=your_key_here
+```
+
+### 5. Prepare your chat data
+```bash
+# Export WhatsApp chat (Without Media)
+# Save as chat.txt in project folder
+# Run ingestion pipeline
+python ingest.py
+```
+
+### 6. Run the app
+```bash
+streamlit run main.py
+```
+
+## 🔑 Key Features
+- ✅ RAG-based grounded responses
+- ✅ Tenglish (Telugu + English) style replication
+- ✅ Streaming responses — no waiting
+- ✅ Conversation memory — stays consistent
+- ✅ Local embeddings — works offline
+- ✅ Content filtering — safe interactions
+
+## 📁 Project Structure
+------------------------------------
+--------------------------------------
+🔮 Future Extensions
+1. 🎤 Voice interface using ElevenLabs
+2. 📱 WhatsApp integration via Twilio
+3. 📄 Multi-document knowledge base
+4. 😊 Emotion detection and adaptive responses
+5. 🌐 Web deployment on Streamlit Cloud
+----------------------------------------------
+----------------------------------------------
